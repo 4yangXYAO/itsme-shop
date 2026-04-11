@@ -100,6 +100,11 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
   }
 
   const WHATSAPP_LINK = buildWhatsAppOrderMessage(orderData)
+  const WHATSAPP_NUMBER = "6281234567890"
+
+const RESEV_UTAMA = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+  "Hi ItsMe Hookah & Tattoo! I would like to make a reservation."
+)}`
 
   return (
     <section className="relative w-full overflow-hidden">
@@ -152,7 +157,7 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
             className="bg-green-600 text-white hover:bg-green-700 uppercase tracking-[0.1em] text-xs sm:text-sm px-6 py-4"
             asChild
           >
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+            <a href={RESEV_UTAMA} target="_blank" rel="noopener noreferrer">
               <MessageCircle className="w-4 h-4 mr-2" />
               {t("WhatsApp Us", "Chat WhatsApp")}
             </a>

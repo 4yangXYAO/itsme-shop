@@ -63,7 +63,7 @@ export default function Home() {
             <HeroSection onNavigate={navigate} />
             <LocationMarquee />
             <AboutSection />
-            <Footer />
+            <Footer activeScreen={screen} onNavigate={navigate} />
           </motion.main>
         )}
 

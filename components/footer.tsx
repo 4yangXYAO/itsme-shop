@@ -3,12 +3,22 @@
 import Link from "next/link"
 import { Instagram, MessageCircle } from "lucide-react"
 import { useLanguage } from "@/components/language-context"
+import type { Screen } from "@/app/page"
 
 const WHATSAPP_NUMBER = "6281234567890"
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`
 
-export function Footer() {
+interface FooterProps {
+  activeScreen: Screen
+  onNavigate: (screen: Screen) => void
+}
+
+export function Footer({ activeScreen, onNavigate }: FooterProps) {
   const { t } = useLanguage()
+
+  function handleNav(screen: Screen) {
+    onNavigate(screen)
+  }
 
   return (
     <footer className="py-16 px-6 lg:px-12 bg-background border-t border-border">
@@ -63,24 +73,36 @@ export function Footer() {
             </h4>
             <ul className="space-y-4">
               <li>
-                <Link href="#menu" className="text-muted-foreground hover:text-primary transition-colors">
+                <button
+                  onClick={() => handleNav("menu")}
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   {t("Shisha Menu", "Menu Shisha")}
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="#gallery" className="text-muted-foreground hover:text-primary transition-colors">
+                <button
+                  onClick={() => handleNav("gallery")}
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   {t("Gallery", "Galeri")}
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="#tattoo" className="text-muted-foreground hover:text-primary transition-colors">
+                <button
+                  onClick={() => handleNav("tattoo")}
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   {t("Tattoo Pricelist", "Harga Tattoo")}
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="#locations" className="text-muted-foreground hover:text-primary transition-colors">
+                <button
+                  onClick={() => handleNav("locations")}
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   {t("Location", "Lokasi")}
-                </Link>
+                </button>
               </li>
               <li>
                 <Link

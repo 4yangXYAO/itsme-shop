@@ -8,7 +8,7 @@ export function MenuSection() {
   const { lang, t } = useLanguage()
 
   return (
-    <section id="menu" className="bg-background">
+    <section id="menu" className="bg-background overflow-x-hidden">
 
       {/* ── Hero Banner ─────────────────────────────────────────────────────── */}
       <div className="relative w-full h-64 md:h-80 overflow-hidden bg-neutral-950 flex items-end">
@@ -50,33 +50,33 @@ export function MenuSection() {
         </div>
       </div>
 
-      <div className="py-16 px-6 max-w-7xl mx-auto">
+      <div className="py-16 px-4 sm:px-6 max-w-7xl mx-auto">
 
         {/* ── Promo Banner ─────────────────────────────────────────────────── */}
-        <div className="bg-primary/10 border border-primary/30 p-5 mb-14 text-center">
-          <div className="flex items-center justify-center gap-3 mb-1">
+        <div className="bg-primary/10 border border-primary/30 p-4 sm:p-5 mb-10 sm:mb-14 text-center">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-1">
             <Gift className="w-5 h-5 text-primary" />
-            <span className="font-serif text-xl md:text-2xl text-primary">
+            <span className="font-serif text-lg sm:text-xl md:text-2xl text-primary">
               {t("Special Promo!", "Promo Spesial!")}
             </span>
           </div>
-          <p className="text-foreground text-base md:text-lg font-medium">
+          <p className="text-foreground text-sm sm:text-base md:text-lg font-medium">
             {t("BUY 2 GET 1 FREE on all Shisha", "BELI 2 GRATIS 1 untuk semua Shisha")}
           </p>
-          <p className="text-muted-foreground text-sm mt-1">
+          <p className="text-muted-foreground text-xs sm:text-sm mt-1">
             {t("Valid everyday, no minimum order", "Berlaku setiap hari, tidak ada minimum order")}
           </p>
         </div>
 
         {/* ── Section Intro ─────────────────────────────────────────────────── */}
-        <div className="text-center mb-14">
-          <span className="text-primary uppercase tracking-[0.3em] text-sm">
+        <div className="text-center mb-10 sm:mb-14">
+          <span className="text-primary uppercase tracking-[0.3em] text-xs sm:text-sm">
             {t("Build Your Order", "Buat Pesananmu")}
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl text-foreground mt-3">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-foreground mt-2 sm:mt-3">
             {t("Choose & Order via WhatsApp", "Pilih & Pesan via WhatsApp")}
           </h2>
-          <p className="text-muted-foreground mt-3 max-w-xl mx-auto">
+          <p className="text-muted-foreground mt-2 sm:mt-3 text-sm sm:text-base max-w-xl mx-auto">
             {t(
               "Select your package and flavors below, then tap Order to send us a pre-filled message.",
               "Pilih paket dan rasa di bawah, lalu tap Pesan untuk kirim pesan langsung ke kami."
@@ -85,25 +85,27 @@ export function MenuSection() {
         </div>
 
         {/* ── Interactive Order Builder ────────────────────────────────────── */}
-        <ShishaOrderBuilder />
+        <div className="overflow-x-auto">
+          <ShishaOrderBuilder />
+        </div>
 
         {/* ── Additional Notes ─────────────────────────────────────────────── */}
-        <div className="max-w-3xl mx-auto mt-16">
-          <div className="border border-border bg-secondary/20 p-6 md:p-8">
-            <div className="flex items-center gap-3 mb-5">
+        <div className="max-w-3xl mx-auto mt-12 sm:mt-16">
+          <div className="border border-border bg-secondary/20 p-4 sm:p-6 md:p-8">
+            <div className="flex items-center gap-3 mb-4 sm:mb-5">
               <AlertCircle className="w-5 h-5 text-primary shrink-0" />
-              <h3 className="font-serif text-xl text-foreground">
+              <h3 className="font-serif text-lg sm:text-xl text-foreground">
                 {t("Additional Information", "Informasi Tambahan")}
               </h3>
             </div>
-            <ul className="space-y-3 text-sm text-muted-foreground">
+            <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-muted-foreground">
               {[
                 { en: "Extra 1 portion flavor: +Rp100.000", id: "Tambah 1 porsi rasa: +Rp100.000" },
                 { en: "Extra charcoal (carkol): +Rp50.000", id: "Tambah arang (carkol): +Rp50.000" },
                 { en: "Delivery to Ubud, Jimbaran, Nusa Dua, Uluwatu: +Rp150.000", id: "Delivery ke Ubud, Jimbaran, Nusa Dua, Uluwatu: +Rp150.000" },
                 { en: "Open 24 Hours — Delivery Available", id: "Buka 24 Jam — Delivery Tersedia" },
               ].map((note, idx, arr) => (
-                <li key={idx} className="flex items-start gap-3">
+                <li key={idx} className="flex items-start gap-2 sm:gap-3">
                   <span className="text-primary mt-0.5">—</span>
                   <span className={idx === arr.length - 1 ? "text-primary font-medium" : ""}>
                     {lang === "en" ? note.en : note.id}
@@ -111,9 +113,9 @@ export function MenuSection() {
                 </li>
               ))}
             </ul>
-            <div className="flex items-center gap-2 mt-6 pt-5 border-t border-border">
+            <div className="flex items-center gap-2 sm:gap-3 mt-4 sm:mt-6 pt-4 sm:pt-5 border-t border-border">
               <Bike className="w-4 h-4 text-primary shrink-0" />
-              <span className="text-xs text-muted-foreground">
+              <span className="text-xs sm:text-sm text-muted-foreground">
                 {t(
                   "Delivery coverage: Ubud · Jimbaran · Nusa Dua · Uluwatu",
                   "Area delivery: Ubud · Jimbaran · Nusa Dua · Uluwatu"
