@@ -133,49 +133,69 @@ export function Header({ activeScreen, onNavigate }: HeaderProps) {
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-16 bg-background/98 backdrop-blur-sm z-40">
-          <div className="flex flex-col items-center justify-center h-full gap-8">
-            {navItems.map(({ screen, labelEn, labelId }) => (
+        <div className="lg:hidden fixed inset-0 z-50 bg-black/90 supports-[backdrop-filter]:bg-black/60 supports-[backdrop-filter]:backdrop-blur-md">
+          <div className="flex flex-col h-full">
+            {/* Top Action Bar */}
+            <div className="flex items-center justify-between px-6 py-4">
               <button
-                key={screen}
-                onClick={() => handleNav(screen)}
-                className={`text-2xl uppercase tracking-[0.3em] transition-colors font-serif ${activeScreen === screen
+                onClick={() => setIsMenuOpen(false)}
+                className="text-foreground hover:text-primary transition-colors"
+                aria-label="Close menu"
+              >
+                <X className="w-6 h-6" />
+              </button>
+
+              <span className="font-serif text-lg tracking-wider text-foreground">
+                ITSME <span className="text-primary">HOOKAH</span> &amp; <span className="text-primary">TATTOO</span>
+              </span>
+
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={toggleLang}
+                  className="text-xs uppercase border border-border hover:border-primary hover:text-primary px-2 py-1.5 transition-colors"
+                >
+                  {lang === "id" ? "EN" : "ID"}
+                </button>
+                <a
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-green-600 text-white hover:bg-green-700 px-3 py-1.5 text-xs uppercase tracking-wider transition-colors flex items-center gap-1"
+                >
+                  <MessageCircle className="w-4 h-4" /> WA
+                </a>
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="border-t border-white/10"></div>
+
+            {/* Menu Items */}
+            <div className="flex flex-col items-center justify-center flex-1 gap-6 px-6 pt-8 pb-10">
+              {navItems.map(({ screen, labelEn, labelId }) => (
+                <button
+                  key={screen}
+                  onClick={() => handleNav(screen)}
+                  className={`text-xl uppercase tracking-[0.18em] leading-relaxed transition-colors font-serif ${activeScreen === screen
+                    ? "text-primary"
+                    : "text-foreground hover:text-primary"
+                    }`}
+                >
+                  {t(labelEn, labelId)}
+                </button>
+              ))}
+
+              {/* About link in mobile only */}
+              <button
+                onClick={() => handleNav("about")}
+                className={`text-xl uppercase tracking-[0.18em] leading-relaxed transition-colors font-serif ${activeScreen === "about"
                   ? "text-primary"
                   : "text-foreground hover:text-primary"
                   }`}
               >
-                {t(labelEn, labelId)}
+                {t("About", "Tentang")}
               </button>
-            ))}
-
-            {/* About link in mobile only */}
-            <button
-              onClick={() => handleNav("about")}
-              className={`text-2xl uppercase tracking-[0.3em] transition-colors font-serif ${activeScreen === "about"
-                ? "text-primary"
-                : "text-foreground hover:text-primary"
-                }`}
-            >
-              {t("About", "Tentang")}
-            </button>
-
-            <button
-              onClick={() => { toggleLang(); setIsMenuOpen(false) }}
-              className="text-2xl uppercase tracking-[0.3em] text-muted-foreground hover:text-primary transition-colors font-serif"
-            >
-              {lang === "id" ? "🇬🇧 English" : "🇮🇩 Indonesia"}
-            </button>
-
-            <a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-2xl uppercase tracking-[0.3em] text-green-500 hover:text-green-400 transition-colors font-serif flex items-center gap-3"
-            >
-              <MessageCircle className="w-6 h-6" />
-              WhatsApp
-            </a>
+            </div>
           </div>
         </div>
       )}
