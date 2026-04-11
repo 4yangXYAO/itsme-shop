@@ -102,7 +102,7 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
   const WHATSAPP_LINK = buildWhatsAppOrderMessage(orderData)
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative w-full overflow-hidden">
       <div className="absolute inset-0">
         <div
           className="absolute inset-0 bg-no-repeat bg-cover bg-center"
@@ -111,17 +111,20 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center px-6">
-        <span className="text-primary uppercase tracking-[0.4em] text-sm mb-4">
+      <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-16 md:py-24">
+        <span className="text-primary uppercase tracking-[0.2em] text-xs sm:text-sm mb-4">
           {t("Open 24 Hours", "Buka 24 Jam")}
         </span>
-        <h1 className="font-serif text-4xl md:text-5xl lg:text-7xl xl:text-8xl text-foreground leading-tight max-w-5xl text-balance">
+        <h1
+          className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-foreground leading-tight max-w-4xl"
+          style={{ lineHeight: "1.2", letterSpacing: "0.02em" }}
+        >
           {t(
             "Welcome to ItsMe Hookah & Tattoo, where smoke meets art",
             "Selamat Datang di ItsMe Hookah & Tattoo, tempat asap bertemu seni"
           )}
         </h1>
-        <p className="text-muted-foreground mt-6 text-lg max-w-xl">
+        <p className="text-muted-foreground mt-6 text-sm sm:text-base md:text-lg max-w-xl">
           {t(
             "Perumahan Graha Tibung Sari, Dalung, Badung (Cia House)",
             "Perumahan Graha Tibung Sari, Dalung, Badung (Cia House)"
@@ -132,21 +135,21 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
           <Button
             variant="outline"
             size="lg"
-            className="border-foreground text-foreground hover:bg-foreground hover:text-background uppercase tracking-[0.2em] text-sm px-8 py-6 bg-transparent"
+            className="border-foreground text-foreground hover:bg-foreground hover:text-background uppercase tracking-[0.1em] text-xs sm:text-sm px-6 py-4"
             onClick={() => onNavigate?.("menu")}
           >
             {t("Shisha Menu", "Menu Shisha")}
           </Button>
           <Button
             size="lg"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 uppercase tracking-[0.2em] text-sm px-8 py-6"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 uppercase tracking-[0.1em] text-xs sm:text-sm px-6 py-4"
             onClick={() => onNavigate?.("tattoo")}
           >
             {t("Tattoo Pricelist", "Harga Tattoo")}
           </Button>
           <Button
             size="lg"
-            className="bg-green-600 text-white hover:bg-green-700 uppercase tracking-[0.2em] text-sm px-8 py-6"
+            className="bg-green-600 text-white hover:bg-green-700 uppercase tracking-[0.1em] text-xs sm:text-sm px-6 py-4"
             asChild
           >
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">

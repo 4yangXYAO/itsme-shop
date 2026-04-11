@@ -133,12 +133,18 @@ export function Header({ activeScreen, onNavigate }: HeaderProps) {
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-50 bg-black/90 supports-[backdrop-filter]:bg-black/60 supports-[backdrop-filter]:backdrop-blur-md">
+        <div
+          className="lg:hidden fixed inset-0 z-50 bg-black/95 supports-[backdrop-filter]:bg-black/60 supports-[backdrop-filter]:backdrop-blur-md"
+          style={{ minHeight: "100svh" }}
+        >
           <div className="flex flex-col h-full">
             {/* Top Action Bar */}
             <div className="flex items-center justify-between px-6 py-4">
               <button
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  document.body.style.overflow = "";
+                }}
                 className="text-foreground hover:text-primary transition-colors"
                 aria-label="Close menu"
               >
@@ -175,7 +181,10 @@ export function Header({ activeScreen, onNavigate }: HeaderProps) {
               {navItems.map(({ screen, labelEn, labelId }) => (
                 <button
                   key={screen}
-                  onClick={() => handleNav(screen)}
+                  onClick={() => {
+                    handleNav(screen);
+                    document.body.style.overflow = "";
+                  }}
                   className={`text-xl uppercase tracking-[0.18em] leading-relaxed transition-colors font-serif ${activeScreen === screen
                     ? "text-primary"
                     : "text-foreground hover:text-primary"
@@ -187,7 +196,10 @@ export function Header({ activeScreen, onNavigate }: HeaderProps) {
 
               {/* About link in mobile only */}
               <button
-                onClick={() => handleNav("about")}
+                onClick={() => {
+                  handleNav("about");
+                  document.body.style.overflow = "";
+                }}
                 className={`text-xl uppercase tracking-[0.18em] leading-relaxed transition-colors font-serif ${activeScreen === "about"
                   ? "text-primary"
                   : "text-foreground hover:text-primary"
