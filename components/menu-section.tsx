@@ -116,14 +116,14 @@ export function MenuSection() {
           </button>
         </div>
 
-                {/* ── Modal Shisha Menu (Floating Style) ───────────────────────────────── */}
+        {/* ── Modal Shisha Menu (Floating Style) ───────────────────────────────── */}
         {isModalOpen && (
           <div
             className="fixed inset-0 z-[100] bg-black/95 flex justify-center p-4 overflow-hidden"
             onClick={() => setIsModalOpen(false)}
           >
             {/* Gambar Mengambang di Tengah */}
-           <div 
+            <div
               className="relative w-full max-w-[92vw] max-h-[90vh] flex items-start justify-center pt-10 sm:pt-14"
               onClick={(e) => e.stopPropagation()}
             >
@@ -149,6 +149,74 @@ export function MenuSection() {
             </button>
           </div>
         )}
+
+        {/* ── Atmosphere Images ──────────────────────────────────────────────── */}
+        <div className="mb-10 sm:mb-14">
+          {/* Divider label */}
+          <div className="flex items-center gap-4 mb-5 sm:mb-6">
+            <div className="h-px flex-1 bg-border/40" />
+            <span className="text-primary uppercase tracking-[0.3em] text-[10px] sm:text-xs shrink-0">
+              {t("Our Atmosphere", "Suasana Kami")}
+            </span>
+            <div className="h-px flex-1 bg-border/40" />
+          </div>
+
+          {/* Asymmetric responsive image grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-[1fr_220px] md:grid-cols-[1fr_260px] lg:grid-cols-[1fr_300px] gap-3 sm:gap-4 max-w-5xl mx-auto">
+
+            {/* Left — large featured image */}
+            <div className="relative overflow-hidden rounded-2xl aspect-[4/3] sm:row-span-2 group">
+              <Image
+                src="/images/shisha_hero_1.png"
+                alt={t("Premium hookah setup", "Setup hookah premium")}
+                fill
+                sizes="(max-width: 640px) 100vw, 55vw"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+              <div className="absolute bottom-3 left-4">
+                <span className="text-[10px] uppercase tracking-[0.25em] text-white/60">
+                  {t("Signature Experience", "Pengalaman Signature")}
+                </span>
+              </div>
+            </div>
+
+            {/* Right top — fruit hookah */}
+            <div className="relative overflow-hidden rounded-2xl aspect-[4/3] group">
+              <Image
+                src="/images/shisha_hero_2.png"
+                alt={t("Fruit hookah setup", "Setup hookah buah")}
+                fill
+                sizes="(max-width: 640px) 100vw, 30vw"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+              <div className="absolute bottom-3 left-3">
+                <span className="text-[10px] uppercase tracking-[0.25em] text-white/60">
+                  {t("Fruit Series", "Seri Buah")}
+                </span>
+              </div>
+            </div>
+
+            {/* Right bottom — lounge */}
+            <div className="relative overflow-hidden rounded-2xl aspect-[4/3] group">
+              <Image
+                src="/images/shisha_hero_3.png"
+                alt={t("Hookah lounge atmosphere", "Suasana lounge hookah")}
+                fill
+                sizes="(max-width: 640px) 100vw, 30vw"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+              <div className="absolute bottom-3 left-3">
+                <span className="text-[10px] uppercase tracking-[0.25em] text-white/60">
+                  {t("Lounge Vibes", "Nuansa Lounge")}
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
 
         {/* ── Section Intro ─────────────────────────────────────────────────── */}
         <div className="text-center mb-10 sm:mb-14">
