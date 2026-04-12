@@ -116,7 +116,7 @@ const RESEV_UTAMA = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-16 md:py-24">
+      <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 pt-24 pb-16 md:py-24">
         <span className="text-primary uppercase tracking-[0.2em] text-xs sm:text-sm mb-8 block">
           {t("Open 24 Hours", "Buka 24 Jam")}
         </span>
