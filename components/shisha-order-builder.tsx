@@ -2,11 +2,11 @@
 
 import { useState, useCallback } from "react"
 import { Button } from "@/components/ui/button"
-import { MessageCircle, Check, ChevronDown, ChevronUp, Bike, Info } from "lucide-react"
+import { MessageCircle, Check, ChevronDown, ChevronUp, Bike, Info, Glasses } from "lucide-react"
 import { useLanguage } from "@/components/language-context"
 
 // ── Constants ────────────────────────────────────────────────────────────────
-const WHATSAPP_NUMBER = "6281234567890"
+const WHATSAPP_NUMBER = "6282266475348"
 
 // ── Menu Data ────────────────────────────────────────────────────────────────
 export const PACKAGES = [
@@ -611,34 +611,32 @@ export function ShishaOrderBuilder() {
         </p>
       )}
 
-      <div className="flex flex-col sm:flex-row gap-4">
+      <div className="flex flex-col sm:flex-row gap-3">
         <Button
-          size="lg"
-          disabled={!canOrder}
-          className="flex-1 bg-green-600 text-white hover:bg-green-700 disabled:opacity-40 disabled:cursor-not-allowed uppercase tracking-[0.2em] text-sm py-6"
-          asChild={canOrder}
-        >
-          {canOrder ? (
-            <a href={orderLink} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="w-4 h-4 mr-2" />
-              {t("Order via WhatsApp", "Pesan via WhatsApp")}
-            </a>
-          ) : (
-            <span>
-              <MessageCircle className="w-4 h-4 mr-2" />
-              {t("Order via WhatsApp", "Pesan via WhatsApp")}
-            </span>
-          )}
-        </Button>
+  disabled={!canOrder}
+  className="flex-1 bg-[#1b5e35] text-white hover:bg-[#164d2c] disabled:opacity-40 disabled:cursor-not-allowed uppercase tracking-[0.15em] text-sm h-auto py-3 px-5"
+  asChild={canOrder}
+>
+  {canOrder ? (
+    <a href={orderLink} target="_blank" rel="noopener noreferrer">
+      <MessageCircle className="w-4 h-4 mr-2" />
+      {t("Order via WhatsApp", "Pesan via WhatsApp")}
+    </a>
+  ) : (
+    <span>
+      <MessageCircle className="w-4 h-4 mr-2" />
+      {t("Order via WhatsApp", "Pesan via WhatsApp")}
+    </span>
+  )}
+</Button>
 
         <Button
-          size="lg"
           variant="outline"
-          className="flex-1 border-border text-foreground hover:border-primary hover:text-primary uppercase tracking-[0.2em] text-sm py-6"
+          className="flex-1 border-primary/60 text-primary hover:bg-primary hover:text-primary-foreground uppercase tracking-[0.15em] text-sm h-auto py-3 px-5"
           asChild
         >
           <a href={consultLink} target="_blank" rel="noopener noreferrer">
-            <MessageCircle className="w-4 h-4 mr-2" />
+            <Glasses className="w-4 h-4 mr-2" />
             {t("Consultation", "Konsultasi")}
           </a>
         </Button>

@@ -98,10 +98,15 @@ export function Header({ activeScreen, onNavigate }: HeaderProps) {
           {/* Desktop Language Toggle */}
           <button
             onClick={toggleLang}
-            className="text-sm uppercase tracking-[0.15em] border border-border hover:border-primary hover:text-primary px-3 py-1.5 transition-colors whitespace-nowrap"
+            className="border border-border hover:border-primary p-1.5 transition-colors flex items-center justify-center"
             aria-label="Toggle language"
+            title={lang === "id" ? "Switch to English" : "Ganti ke Bahasa Indonesia"}
           >
-            {lang === "id" ? "🇬🇧 EN" : "🇮🇩 ID"}
+            <img
+              src={lang === "id" ? "/laguage/uk.png" : "/laguage/id.png"}
+              alt={lang === "id" ? "English" : "Indonesia"}
+              className="w-6 h-4 object-cover"
+            />
           </button>
 
           {/* Desktop WhatsApp */}
@@ -144,9 +149,15 @@ export function Header({ activeScreen, onNavigate }: HeaderProps) {
         <div className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
           <button
             onClick={toggleLang}
-            className="text-xs uppercase border border-border hover:border-primary hover:text-primary px-1.5 sm:px-2 py-1 sm:py-1.5 transition-colors whitespace-nowrap text-[10px] sm:text-xs"
+            className="border border-border hover:border-primary p-1 sm:p-1.5 transition-colors flex items-center justify-center"
+            aria-label="Toggle language"
+            title={lang === "id" ? "Switch to English" : "Ganti ke Bahasa Indonesia"}
           >
-            {lang === "id" ? "EN" : "ID"}
+            <img
+              src={lang === "id" ? "/laguage/uk.png" : "/laguage/id.png"}
+              alt={lang === "id" ? "English" : "Indonesia"}
+              className="w-5 h-3.5 sm:w-6 sm:h-4 object-cover"
+            />
           </button>
           
         </div>

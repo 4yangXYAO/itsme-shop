@@ -121,7 +121,11 @@ export function Footer({ activeScreen, onNavigate }: FooterProps) {
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"
                 >
-                  +62 812 3456 7890
+                <div className="hover:text-primary transition-colors">
+                    <div>+62 822 6647 5348</div>
+                    <div>+62 813 3993 180</div>
+                </div>
+
                 </Link>
               </li>
               <li>Perumahan Graha Tibung Sari</li>

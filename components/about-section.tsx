@@ -31,9 +31,9 @@ export function AboutSection() {
             </span>
           </div>
           <div className="text-center">
-            <span className="block font-serif text-4xl md:text-5xl text-primary">Buy 2</span>
+            <span className="block font-serif text-4xl md:text-5xl text-primary">DELIVERY</span>
             <span className="text-sm uppercase tracking-[0.2em] text-muted-foreground mt-2 block">
-              {t("Get 1 Free Shisha", "Gratis 1 Shisha")}
+              {t("Ke Seluruh Bali", "ALL OF BALI")}
             </span>
           </div>
           <div className="text-center">

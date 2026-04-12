@@ -9,7 +9,7 @@ interface HeroSectionProps {
   onNavigate?: (screen: Screen) => void
 }
 
-const WHATSAPP_NUMBER = "6281234567890"
+const WHATSAPP_NUMBER = "6282266475348"
 
 interface WhatsAppOrderData {
   package?: string;
@@ -100,7 +100,7 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
   }
 
   const WHATSAPP_LINK = buildWhatsAppOrderMessage(orderData)
-  const WHATSAPP_NUMBER = "6281234567890"
+  const WHATSAPP_NUMBER = "6282266475348"
 
 const RESEV_UTAMA = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   "Hi ItsMe Hookah & Tattoo! I would like to make a reservation."
@@ -117,7 +117,7 @@ const RESEV_UTAMA = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
       </div>
 
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-16 md:py-24">
-        <span className="text-primary uppercase tracking-[0.2em] text-xs sm:text-sm mb-4">
+        <span className="text-primary uppercase tracking-[0.2em] text-xs sm:text-sm mb-8 block">
           {t("Open 24 Hours", "Buka 24 Jam")}
         </span>
         <h1
@@ -136,25 +136,30 @@ const RESEV_UTAMA = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
           )}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 mt-10">
+        <div className="flex flex-col sm:flex-row gap-4 mt-10 w-full sm:w-auto">
+          {/* Menu Shisha — putih redup, sesuai dark theme */}
           <Button
             variant="outline"
             size="lg"
-            className="border-foreground text-foreground hover:bg-foreground hover:text-background uppercase tracking-[0.1em] text-xs sm:text-sm px-6 py-4"
+            className="w-full sm:w-44 border-white/40 text-white/75 hover:bg-white/10 hover:border-white/60 hover:text-white uppercase tracking-[0.1em] text-xs sm:text-sm px-6 py-5"
             onClick={() => onNavigate?.("menu")}
           >
             {t("Shisha Menu", "Menu Shisha")}
           </Button>
+
+          {/* Harga Tattoo — gold gelap, premium */}
           <Button
             size="lg"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 uppercase tracking-[0.1em] text-xs sm:text-sm px-6 py-4"
+            className="w-full sm:w-44 bg-[#b8860b] text-white hover:bg-[#a07808] uppercase tracking-[0.1em] text-xs sm:text-sm px-6 py-5"
             onClick={() => onNavigate?.("tattoo")}
           >
             {t("Tattoo Pricelist", "Harga Tattoo")}
           </Button>
+
+          {/* WhatsApp — hijau hutan gelap */}
           <Button
             size="lg"
-            className="bg-green-600 text-white hover:bg-green-700 uppercase tracking-[0.1em] text-xs sm:text-sm px-6 py-4"
+            className="w-full sm:w-44 bg-[#1b5e35] text-white hover:bg-[#164d2c] uppercase tracking-[0.1em] text-xs sm:text-sm px-6 py-5"
             asChild
           >
             <a href={RESEV_UTAMA} target="_blank" rel="noopener noreferrer">

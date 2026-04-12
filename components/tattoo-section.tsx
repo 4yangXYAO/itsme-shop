@@ -130,9 +130,9 @@ export function TattooSection() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
+             <Button
                 size="lg"
-                className="bg-green-600 text-white hover:bg-green-700 uppercase tracking-[0.2em] text-sm px-8 py-6"
+                className="bg-[#1b5e35] text-white hover:bg-[#164d2c] uppercase tracking-[0.2em] text-sm px-8 py-6"
                 asChild
               >
                 <a href={WHATSAPP_LINK_TATTOO} target="_blank" rel="noopener noreferrer">

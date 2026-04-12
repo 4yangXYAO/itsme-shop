@@ -11,7 +11,7 @@ export function LocationMarquee() {
     { text: t("OPEN 24 HOURS", "BUKA 24 JAM"), highlight: true },
     { text: "HOOKAH LOUNGE", highlight: false },
     { text: "TATTOO STUDIO", highlight: false },
-    { text: t("BUY 2 GET 1 FREE SHISHA", "BELI 2 GRATIS 1 SHISHA"), highlight: true },
+    { text: "ALL OF BALI", highlight: false },
     { text: "DALUNG, BADUNG", highlight: false },
     { text: "CIA HOUSE", highlight: false },
   ]
