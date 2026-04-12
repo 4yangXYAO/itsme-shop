@@ -61,7 +61,7 @@ export function MenuSection() {
             </span>
           </div>
           <p className="text-foreground text-sm sm:text-base md:text-lg font-medium">
-            {t("BUY 2 GET 1 FREE on all Shisha", "BELI 2 GRATIS 1 untuk semua Shisha")}
+            {t("cek cek")}
           </p>
           <p className="text-muted-foreground text-xs sm:text-sm mt-1">
             {t("Valid everyday, no minimum order", "Berlaku setiap hari, tidak ada minimum order")}
