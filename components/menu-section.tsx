@@ -17,9 +17,32 @@ export function MenuSection() {
       }
     }
 
+    let touchStartY = 0
+
+    const handleTouchStart = (event: TouchEvent) => {
+      touchStartY = event.touches[0].clientY
+    }
+
+    const handleTouchEnd = (event: TouchEvent) => {
+      const touchEndY = event.changedTouches[0].clientY
+      const diffY = touchEndY - touchStartY
+
+      // Swipe down more than 100px to close
+      if (diffY > 100) {
+        setIsModalOpen(false)
+      }
+    }
+
     if (isModalOpen) {
       window.addEventListener("keydown", handleKeyDown)
-      return () => window.removeEventListener("keydown", handleKeyDown)
+      document.addEventListener("touchstart", handleTouchStart)
+      document.addEventListener("touchend", handleTouchEnd)
+
+      return () => {
+        window.removeEventListener("keydown", handleKeyDown)
+        document.removeEventListener("touchstart", handleTouchStart)
+        document.removeEventListener("touchend", handleTouchEnd)
+      }
     }
   }, [isModalOpen])
 
@@ -94,34 +117,44 @@ export function MenuSection() {
         </div>
 
         {isModalOpen ? (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 sm:p-6" role="dialog" aria-modal="true">
-            <div className="absolute inset-0 z-10">
-              <button
-                type="button"
-                onClick={() => setIsModalOpen(false)}
-                className="h-full w-full cursor-pointer bg-transparent"
-                aria-hidden="true"
-              />
-            </div>
-            <div className="relative z-20 mx-auto max-h-[90vh] w-full max-w-[90vw] overflow-hidden rounded-[2rem] border border-primary/20 bg-neutral-950 shadow-[0_0_80px_rgba(0,0,0,0.65)]">
-              <button
-                type="button"
-                onClick={() => setIsModalOpen(false)}
-                className="absolute right-4 top-4 z-30 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-black/60 text-white shadow-lg transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-primary/50"
-                aria-label={lang === "en" ? "Close preview" : "Tutup pratinjau"}
-              >
-                <X className="h-5 w-5" />
-              </button>
-              <div className="relative aspect-[16/10] w-full">
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-2 sm:p-4 md:p-6 backdrop-blur-sm transition-opacity duration-300 ease-out opacity-100"
+            role="dialog"
+            aria-modal="true"
+          >
+            {/* Overlay backdrop - clickable to close */}
+            <button
+              type="button"
+              onClick={() => setIsModalOpen(false)}
+              className="absolute inset-0 z-10 cursor-default bg-transparent"
+              aria-hidden="true"
+            />
+
+            {/* Modal content container */}
+            <div className="relative z-20 w-full max-w-[95vw] max-h-[95vh] flex flex-col items-center justify-center mx-auto animate-in fade-in zoom-in-95 duration-300">
+              {/* Image wrapper with proper aspect ratio control */}
+              <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-3xl border border-primary/30 bg-neutral-950/80 shadow-2xl">
                 <Image
                   src="/menu/shisha_menu.jpg"
-                  alt={lang === "en" ? "Vintage Shisha menu" : "Menu Shisha bergaya vintage"}
-                  fill
+                  alt={lang === "en" ? "Vintage Shisha menu full view" : "Tampilan penuh menu Shisha vintage"}
+                  width={1200}
+                  height={1600}
                   priority
-                  sizes="(max-width: 768px) 100vw, 1200px"
-                  className="object-contain"
+                  sizes="(max-width: 640px) 95vw, (max-width: 768px) 90vw, (max-width: 1024px) 85vw, 80vw"
+                  quality={95}
+                  className="w-auto h-auto max-h-[90vh] max-w-[95vw] object-contain"
                 />
               </div>
+
+              {/* Close button - positioned absolutely outside image */}
+              <button
+                type="button"
+                onClick={() => setIsModalOpen(false)}
+                className="absolute -right-3 -top-3 sm:right-2 sm:top-2 md:right-4 md:top-4 z-30 inline-flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full border border-white/20 bg-black/80 text-white shadow-xl transition-all hover:bg-white/10 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary/50"
+                aria-label={lang === "en" ? "Close preview" : "Tutup pratinjau"}
+              >
+                <X className="h-5 w-5 sm:h-6 sm:w-6" />
+              </button>
             </div>
           </div>
         ) : null}
