@@ -114,12 +114,12 @@ export function LocationsSection() {
         {/* Info Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-4xl mx-auto">
           <div className="bg-card border border-border p-6 text-center">
-            <span className="text-primary font-serif text-2xl block mb-2">Shisha</span>
+            <span className="text-primary font-serif text-2xl block mb-2">Delivery</span>
             <p className="text-muted-foreground text-sm">
-              {t("Buy 2 Get 1 Free", "Beli 2 Gratis 1")}
+              {t("Throughout", "Seluruh")}
             </p>
             <p className="text-foreground mt-1">
-              {t("All Flavors Available", "Semua Rasa Tersedia")}
+              {t("Bali", "Bali")}
             </p>
           </div>
           <div className="bg-card border border-border p-6 text-center">

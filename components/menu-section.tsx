@@ -101,7 +101,7 @@ export function MenuSection() {
           >
             <div className="relative aspect-[16/10] sm:aspect-[4/3] lg:aspect-[16/9] w-full">
               <Image
-                src="/menu/shisha_menu.jpg"
+                src="/menu/menu1.jpeg"
                 alt={lang === "en" ? "Vintage Shisha menu" : "Menu Shisha bergaya vintage"}
                 fill
                 priority
@@ -128,7 +128,7 @@ export function MenuSection() {
               onClick={(e) => e.stopPropagation()}
             >
               <Image
-                src="/menu/shisha_menu.jpg"
+                src="/menu/menu1.jpeg"
                 alt="Full Shisha Menu"
                 width={1300}
                 height={1800}
