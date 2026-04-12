@@ -18,7 +18,7 @@ const navItems: { screen: Screen; labelEn: string; labelId: string; sectionId?: 
   { screen: "tattoo", labelEn: "Tattoo", labelId: "Tattoo", sectionId: "tattoo" },
   { screen: "gallery", labelEn: "Gallery", labelId: "Galeri", sectionId: "galeri" },
   { screen: "locations", labelEn: "Location", labelId: "Lokasi", sectionId: "lokasi" },
-  { screen: "home", labelEn: "Reservation", labelId: "Reservasi", sectionId: "reservasi" },
+ 
 ]
 
 export function Header({ activeScreen, onNavigate }: HeaderProps) {
@@ -148,16 +148,7 @@ export function Header({ activeScreen, onNavigate }: HeaderProps) {
           >
             {lang === "id" ? "EN" : "ID"}
           </button>
-          <Button
-            size="sm"
-            className="bg-green-600 text-white hover:bg-green-700 uppercase tracking-wider text-xs px-2 sm:px-3 h-8 sm:h-9"
-            asChild
-          >
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-0.5 sm:gap-1">
-              <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-              <span className="hidden sm:inline">WA</span>
-            </a>
-          </Button>
+          
         </div>
       </nav>
     </header>
