@@ -104,16 +104,7 @@ export function Footer({ activeScreen, onNavigate }: FooterProps) {
                   {t("Location", "Lokasi")}
                 </button>
               </li>
-              <li>
-                <Link
-                  href={WHATSAPP_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  {t("Reserve via WhatsApp", "Reservasi via WhatsApp")}
-                </Link>
-              </li>
+              
             </ul>
           </div>
 
