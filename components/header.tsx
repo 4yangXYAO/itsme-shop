@@ -105,15 +105,7 @@ export function Header({ activeScreen, onNavigate }: HeaderProps) {
           </button>
 
           {/* Desktop WhatsApp */}
-          <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm uppercase tracking-[0.2em] bg-green-600 text-white hover:bg-green-700 px-4 py-2 transition-colors whitespace-nowrap"
-          >
-            <MessageCircle className="w-4 h-4" />
-            WhatsApp
-          </a>
+         
         </div>
       </nav>
 
