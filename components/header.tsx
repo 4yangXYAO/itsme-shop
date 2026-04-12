@@ -103,7 +103,7 @@ export function Header({ activeScreen, onNavigate }: HeaderProps) {
             title={lang === "id" ? "Switch to English" : "Ganti ke Bahasa Indonesia"}
           >
             <img
-              src={lang === "id" ? "/laguage/uk.png" : "/laguage/id.png"}
+              src={lang === "id" ? "/laguage/id.png" : "/laguage/uk.png"}
               alt={lang === "id" ? "English" : "Indonesia"}
               className="w-6 h-4 object-cover"
             />
