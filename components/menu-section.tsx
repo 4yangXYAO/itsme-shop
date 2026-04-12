@@ -1,11 +1,27 @@
 "use client"
 
-import { Gift, AlertCircle, Bike } from "lucide-react"
+import { Gift, AlertCircle, Bike, X } from "lucide-react"
+import { useEffect, useState } from "react"
+import Image from "next/image"
 import { useLanguage } from "@/components/language-context"
 import { ShishaOrderBuilder } from "@/components/shisha-order-builder"
 
 export function MenuSection() {
   const { lang, t } = useLanguage()
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsModalOpen(false)
+      }
+    }
+
+    if (isModalOpen) {
+      window.addEventListener("keydown", handleKeyDown)
+      return () => window.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [isModalOpen])
 
   return (
     <section id="menu" className="bg-background overflow-x-hidden">
@@ -52,21 +68,63 @@ export function MenuSection() {
 
       <div className="py-16 px-4 sm:px-6 max-w-7xl mx-auto">
 
-        {/* ── Promo Banner ─────────────────────────────────────────────────── */}
-        <div className="bg-primary/10 border border-primary/30 p-4 sm:p-5 mb-10 sm:mb-14 text-center">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-1">
-            <Gift className="w-5 h-5 text-primary" />
-            <span className="font-serif text-lg sm:text-xl md:text-2xl text-primary">
-              {t("Special Promo!", "Promo Spesial!")}
-            </span>
-          </div>
-          <p className="text-foreground text-sm sm:text-base md:text-lg font-medium">
-            {t("cek cek")}
-          </p>
-          <p className="text-muted-foreground text-xs sm:text-sm mt-1">
-            {t("Valid everyday, no minimum order", "Berlaku setiap hari, tidak ada minimum order")}
-          </p>
+        {/* ── Promo Banner / Menu Image ─────────────────────────────────────── */}
+        <div className="mb-10 sm:mb-14">
+          <button
+            type="button"
+            onClick={() => setIsModalOpen(true)}
+            className="group relative w-full max-w-5xl mx-auto overflow-hidden rounded-[2rem] border border-primary/20 bg-white/5 shadow-[0_32px_90px_-45px_rgba(255,195,0,0.35)] transition-transform duration-300 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary/50"
+            aria-label={lang === "en" ? "Open full Shisha menu" : "Buka menu Shisha penuh"}
+          >
+            <div className="relative aspect-[16/10] sm:aspect-[4/3] lg:aspect-[16/9] w-full">
+              <Image
+                src="/menu/shisha_menu.jpg"
+                alt={lang === "en" ? "Vintage Shisha menu" : "Menu Shisha bergaya vintage"}
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 1200px"
+                className="object-contain transition duration-300 ease-out"
+              />
+            </div>
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            <div className="pointer-events-none absolute inset-x-0 bottom-4 px-4 text-center text-sm text-foreground/80 tracking-[0.25em] uppercase">
+              {lang === "en" ? "Tap to enlarge" : "Ketuk untuk memperbesar"}
+            </div>
+          </button>
         </div>
+
+        {isModalOpen ? (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 sm:p-6" role="dialog" aria-modal="true">
+            <div className="absolute inset-0 z-10">
+              <button
+                type="button"
+                onClick={() => setIsModalOpen(false)}
+                className="h-full w-full cursor-pointer bg-transparent"
+                aria-hidden="true"
+              />
+            </div>
+            <div className="relative z-20 mx-auto max-h-[90vh] w-full max-w-[90vw] overflow-hidden rounded-[2rem] border border-primary/20 bg-neutral-950 shadow-[0_0_80px_rgba(0,0,0,0.65)]">
+              <button
+                type="button"
+                onClick={() => setIsModalOpen(false)}
+                className="absolute right-4 top-4 z-30 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-black/60 text-white shadow-lg transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-primary/50"
+                aria-label={lang === "en" ? "Close preview" : "Tutup pratinjau"}
+              >
+                <X className="h-5 w-5" />
+              </button>
+              <div className="relative aspect-[16/10] w-full">
+                <Image
+                  src="/menu/shisha_menu.jpg"
+                  alt={lang === "en" ? "Vintage Shisha menu" : "Menu Shisha bergaya vintage"}
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 1200px"
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        ) : null}
 
         {/* ── Section Intro ─────────────────────────────────────────────────── */}
         <div className="text-center mb-10 sm:mb-14">
