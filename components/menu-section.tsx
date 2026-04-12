@@ -267,8 +267,8 @@ export function MenuSection() {
               <Bike className="w-4 h-4 text-primary shrink-0" />
               <span className="text-xs sm:text-sm text-muted-foreground">
                 {t(
-                  "Delivery coverage: Ubud · Jimbaran · Nusa Dua · Uluwatu",
-                  "Area delivery: Ubud · Jimbaran · Nusa Dua · Uluwatu"
+                  "Delivery coverage: All of Bali",
+                  "Area delivery: Seluruh Bali"
                 )}
               </span>
             </div>
