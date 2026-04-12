@@ -614,30 +614,30 @@ export function ShishaOrderBuilder() {
       <div className="flex flex-col sm:flex-row gap-3">
         <Button
   disabled={!canOrder}
-  className="flex-1 bg-[#1b5e35] text-white hover:bg-[#164d2c] disabled:opacity-40 disabled:cursor-not-allowed uppercase tracking-[0.15em] text-sm h-auto py-3 px-5"
+  className="flex-1 bg-[#1b5e35] text-white hover:bg-[#164d2c] disabled:opacity-40 disabled:cursor-not-allowed uppercase tracking-[0.05em] text-xs h-auto py-3 px-3"
   asChild={canOrder}
 >
   {canOrder ? (
-    <a href={orderLink} target="_blank" rel="noopener noreferrer">
-      <MessageCircle className="w-4 h-4 mr-2" />
-      {t("Order via WhatsApp", "Pesan via WhatsApp")}
+    <a href={orderLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full">
+      <MessageCircle className="w-4 h-4 mr-1.5 shrink-0" />
+      <span>{t("Order via WhatsApp", "Pesan via WhatsApp")}</span>
     </a>
   ) : (
-    <span>
-      <MessageCircle className="w-4 h-4 mr-2" />
-      {t("Order via WhatsApp", "Pesan via WhatsApp")}
+    <span className="flex items-center justify-center w-full">
+      <MessageCircle className="w-4 h-4 mr-1.5 shrink-0" />
+      <span>{t("Order via WhatsApp", "Pesan via WhatsApp")}</span>
     </span>
   )}
 </Button>
 
         <Button
           variant="outline"
-          className="flex-1 border-primary/60 text-primary hover:bg-primary hover:text-primary-foreground uppercase tracking-[0.15em] text-sm h-auto py-3 px-5"
+          className="flex-1 border-primary/60 text-primary hover:bg-primary hover:text-primary-foreground uppercase tracking-[0.05em] text-xs h-auto py-3 px-3"
           asChild
         >
-          <a href={consultLink} target="_blank" rel="noopener noreferrer">
-            <Glasses className="w-4 h-4 mr-2" />
-            {t("Consultation", "Konsultasi")}
+          <a href={consultLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full">
+            <Glasses className="w-4 h-4 mr-1.5 shrink-0" />
+            <span>{t("Consultation", "Konsultasi")}</span>
           </a>
         </Button>
       </div>

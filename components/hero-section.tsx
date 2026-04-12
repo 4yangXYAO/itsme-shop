@@ -137,11 +137,11 @@ const RESEV_UTAMA = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mt-10 w-full sm:w-auto">
-          {/* Menu Shisha — putih redup, sesuai dark theme */}
+          {/* Menu Shisha — putih redup solid */}
           <Button
             variant="outline"
             size="lg"
-            className="w-full sm:w-44 border-white/40 text-white/75 hover:bg-white/10 hover:border-white/60 hover:text-white uppercase tracking-[0.1em] text-xs sm:text-sm px-6 py-5"
+            className="w-full sm:w-44 bg-white/15 border-white/40 text-white hover:bg-white/25 hover:border-white/60 uppercase tracking-[0.1em] text-xs sm:text-sm px-6 py-5"
             onClick={() => onNavigate?.("menu")}
           >
             {t("Shisha Menu", "Menu Shisha")}

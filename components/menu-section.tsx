@@ -223,7 +223,7 @@ export function MenuSection() {
           <span className="text-primary uppercase tracking-[0.3em] text-xs sm:text-sm">
             {t("Build Your Order", "Buat Pesananmu")}
           </span>
-          <h2 className="font-serif text-xl sm:text-3xl md:text-4xl text-foreground mt-2 sm:mt-2">
+          <h2 className="font-serif text-xl sm:text-3xl md:text-4xl text-foreground mt-2 sm:mt-3">
             {t("Choose & Order via WhatsApp", "Pilih & Pesan via WhatsApp")}
           </h2>
           <p className="text-muted-foreground mt-2 sm:mt-3 text-sm sm:text-base max-w-xl mx-auto">
