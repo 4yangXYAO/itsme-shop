@@ -120,13 +120,23 @@ export function Header({ activeScreen, onNavigate }: HeaderProps) {
       {/* Mobile Navigation Layout */}
       <nav className="lg:hidden flex items-center justify-between gap-2 w-full min-h-[44px] relative z-50">
         {/* Mobile: Menu Button */}
+                {/* Mobile: Menu Button */}
         <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={() => {
+            const newState = !isMenuOpen
+            setIsMenuOpen(newState)
+            
+            // Tutup modal shisha menu kalau hamburger dibuka
+            if (newState) {
+              window.dispatchEvent(new Event("mobileMenuOpen"))
+            }
+          }}
           className="flex-shrink-0 text-foreground hover:text-primary transition-colors p-1 relative z-50"
           aria-label="Toggle menu"
         >
           {isMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
         </button>
+         
 
         {/* Mobile: Logo (Compact) */}
         <button
