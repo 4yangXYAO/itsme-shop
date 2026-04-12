@@ -142,7 +142,7 @@ export function MenuSection() {
             <button
               type="button"
               onClick={() => setIsModalOpen(false)}
-              className="fixed top-20 right-4 z-[110] h-14 w-14 flex items-center justify-center rounded-full bg-black/80 backdrop-blur-xl border border-white/30 text-white shadow-2xl hover:bg-black/90 hover:scale-110 active:scale-95 transition-all duration-200"
+              className="fixed top-20 right-4 z-[110] h-14 w-14 flex items-center justify-center rounded-full bg-transparent backdrop-blur-xl border border-white/30 text-white shadow-2xl hover:bg-black/90 hover:scale-110 active:scale-95 transition-all duration-200"
               aria-label="Close menu preview"
             >
               <X className="h-7 w-7" />
