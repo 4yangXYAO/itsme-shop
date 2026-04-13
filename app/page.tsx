@@ -135,6 +135,7 @@ export default function Home() {
             onBack={goBack}
             direction={direction}
           >
+             <LocationMarquee /> 
             <AboutSection />
           </ScreenWrapper>
         )}
