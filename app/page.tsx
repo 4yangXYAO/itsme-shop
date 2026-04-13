@@ -71,11 +71,14 @@ export default function Home() {
           <ScreenWrapper
             key="menu"
             screenKey="menu"
+            
             title="Menu"
             subtitle="Hookah & Shisha Selection"
             onBack={goBack}
             direction={direction}
+            
           >
+            <LocationMarquee /> 
             <MenuSection />
           </ScreenWrapper>
         )}
