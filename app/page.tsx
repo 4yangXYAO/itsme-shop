@@ -92,7 +92,9 @@ export default function Home() {
             onBack={goBack}
             direction={direction}
           >
+             <LocationMarquee /> 
             <TattooSection />
+            
           </ScreenWrapper>
         )}
 
@@ -105,6 +107,7 @@ export default function Home() {
             onBack={goBack}
             direction={direction}
           >
+             <LocationMarquee /> 
             <GalleryPage />
           </ScreenWrapper>
         )}
@@ -118,6 +121,7 @@ export default function Home() {
             onBack={goBack}
             direction={direction}
           >
+             <LocationMarquee /> 
             <LocationsSection />
           </ScreenWrapper>
         )}
