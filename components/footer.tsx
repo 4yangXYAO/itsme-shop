@@ -128,8 +128,8 @@ export function Footer({ activeScreen, onNavigate }: FooterProps) {
 
                 </Link>
               </li>
-              <li>Perumahan Graha Tibung Sari</li>
-              <li>Dalung, Badung (Cia House)</li>
+              <li>Perumahan Graha Tibung Sari No. 7</li>
+              <li>Dalung, Badung (ItsMe Studio)</li>
               <li className="text-primary font-medium">
                 {t("Open 24 Hours", "Buka 24 Jam")}
               </li>

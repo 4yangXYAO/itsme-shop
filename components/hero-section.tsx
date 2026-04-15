@@ -131,8 +131,8 @@ const RESEV_UTAMA = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
         </h1>
         <p className="text-muted-foreground mt-6 text-sm sm:text-base md:text-lg max-w-xl">
           {t(
-            "Perumahan Graha Tibung Sari, Dalung, Badung (Cia House)",
-            "Perumahan Graha Tibung Sari, Dalung, Badung (Cia House)"
+            "Perumahan Graha Tibung Sari No. 7, Dalung, Badung (ItsMe Studio)",
+            "Perumahan Graha Tibung Sari No. 7, Dalung, Badung (ItsMe Studio)"
           )}
         </p>
 
