@@ -17,8 +17,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'ItsMe Hookah & Tattoo – Premium Shisha Lounge & Tattoo Studio in Dalung, Badung | Buka 24 Jam',
-  description: 'ItsMe Hookah & Tattoo — destinasi premium shisha dan tattoo terbaik di Bali. Buka 24 jam di Perumahan Graha Tibung Sari, Dalung, Badung (Cia House). Shisha Buy 2 Get 1 Free. Tattoo mulai IDR 350K.',
+  title: 'ItsMe Shisha & Tattoo – Premium Shisha Lounge & Tattoo Studio in Dalung, Badung | Buka 24 Jam',
+  description: 'ItsMe Shisha & Tattoo — destinasi premium shisha dan tattoo terbaik di Bali. Buka 24 jam di Perumahan Graha Tibung Sari, Dalung, Badung (Cia House). Shisha Buy 2 Get 1 Free. Tattoo mulai IDR 350K.',
+  icons: {
+    icon: '/icon/favicon.ico',
+  },
 }
 
 export const viewport: Viewport = {

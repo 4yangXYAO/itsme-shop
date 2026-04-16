@@ -103,7 +103,7 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
   const WHATSAPP_NUMBER = "6282266475348"
 
 const RESEV_UTAMA = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  "Hi ItsMe Hookah & Tattoo! I would like to make a reservation."
+  "Hi ItsMe Shisha & Tattoo! I would like to make a reservation."
 )}`
 
   return (
@@ -125,8 +125,8 @@ const RESEV_UTAMA = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
           style={{ lineHeight: "1.2", letterSpacing: "0.02em" }}
         >
           {t(
-            "Welcome to ItsMe Hookah & Tattoo, where smoke meets art",
-            "Selamat Datang di ItsMe Hookah & Tattoo, tempat asap bertemu seni"
+            "Welcome to ItsMe Shisha & Tattoo, where smoke meets art",
+            "Selamat Datang di ItsMe Shisha & Tattoo, tempat asap bertemu seni"
           )}
         </h1>
         <p className="text-muted-foreground mt-6 text-sm sm:text-base md:text-lg max-w-xl">

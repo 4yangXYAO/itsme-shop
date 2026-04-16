@@ -27,7 +27,7 @@ export function Footer({ activeScreen, onNavigate }: FooterProps) {
           {/* Brand */}
           <div className="md:col-span-2">
             <span className="font-serif text-2xl tracking-wider text-foreground">
-              ITSME <span className="text-primary">HOOKAH</span> &amp; <span className="text-primary">TATTOO</span>
+              ITSME <span className="text-primary">SHISHA</span> &amp; <span className="text-primary">TATTOO</span>
             </span>
             <p className="text-muted-foreground mt-4 max-w-md">
               {t(
