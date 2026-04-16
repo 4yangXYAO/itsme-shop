@@ -37,7 +37,7 @@ export function Footer({ activeScreen, onNavigate }: FooterProps) {
             </p>
             <div className="flex gap-4 mt-6">
               <Link
-                href="https://instagram.com/its_me_shisha"
+                href="https://instagram.com/its_me_shisha_"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center border border-border hover:border-primary hover:text-primary transition-colors"
@@ -135,7 +135,7 @@ export function Footer({ activeScreen, onNavigate }: FooterProps) {
               </li>
               <li className="pt-2 border-t border-border">
                 <Link
-                  href="https://instagram.com/its_me_shisha"
+                  href="https://instagram.com/its_me_shisha_"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 hover:text-primary transition-colors"

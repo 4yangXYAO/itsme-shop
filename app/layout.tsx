@@ -140,7 +140,7 @@ const localBusinessSchema = {
   currenciesAccepted: 'IDR',
   paymentAccepted: 'Cash, Transfer Bank, QRIS',
   sameAs: [
-    'https://www.instagram.com/its_me_shisha',
+    'https://www.instagram.com/its_me_shisha_',
     'https://www.instagram.com/its_me_tatto_',
     `https://wa.me/6282266475348`,
   ],
@@ -283,7 +283,7 @@ const faqSchema = {
       name: 'Does ItsMe Bali have an Instagram account?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Follow @its_me_shisha on Instagram for shisha updates and @its_me_tatto_ for tattoo portfolio and updates.',
+        text: 'Yes. Follow @its_me_shisha_ on Instagram for shisha updates and @its_me_tatto_ for tattoo portfolio and updates.',
       },
     },
     {
