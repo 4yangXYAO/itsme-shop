@@ -96,7 +96,7 @@ export function MenuSection() {
           <button
             type="button"
             onClick={() => setIsModalOpen(true)}
-            className="group relative w-full max-w-5xl mx-auto overflow-hidden rounded-[2rem] border border-primary/20 bg-white/5 shadow-[0_32px_90px_-45px_rgba(255,195,0,0.35)] transition-transform duration-300 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary/50"
+            className="group relative w-full max-w-5xl ml-[10%] mr-auto overflow-hidden rounded-[2rem] border border-primary/20 bg-white/5 shadow-[0_32px_90px_-45px_rgba(255,195,0,0.35)] transition-transform duration-300 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary/50"
             aria-label={lang === "en" ? "Open full Shisha menu" : "Buka menu Shisha penuh"}
           >
             <div className="relative aspect-[16/10] sm:aspect-[4/3] lg:aspect-[16/9] w-full">
@@ -107,6 +107,7 @@ export function MenuSection() {
                 priority
                 sizes="(max-width: 768px) 100vw, 1200px"
                 className="object-contain transition duration-300 ease-out"
+                  
               />
             </div>
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
