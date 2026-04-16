@@ -79,11 +79,11 @@ export function MenuSection() {
         {/* Overlay gradient bottom */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
         {/* Hero text */}
-        <div className="relative z-10 w-full px-6 pb-8 md:pb-10 max-w-7xl mx-auto">
+        <div className="relative z-10 w-full px-6 pb-8 md:pb-10 max-w-7xl mx-auto text-center">
           <span className="text-primary uppercase tracking-[0.35em] text-xs">
             {t("Premium Experience", "Pengalaman Premium")}
           </span>
-          <h1 className="font-serif text-4xl md:text-5xl text-foreground mt-2 leading-tight">
+          <h1 className="font-serif text-4xl md:text-5xl text-foreground mt-2 leading-tight text-center">
             {t("Shisha Menu", "Menu Shisha")}
           </h1>
         </div>
@@ -101,13 +101,13 @@ export function MenuSection() {
           >
             <div className="relative aspect-[16/10] sm:aspect-[4/3] lg:aspect-[16/9] w-full">
               <Image
-                src="/menu/menu1.jpeg"
+                src="/menu/menu1.jpg"
                 alt={lang === "en" ? "Vintage Shisha menu" : "Menu Shisha bergaya vintage"}
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, 1200px"
                 className="object-contain transition duration-300 ease-out"
-                  
+                 
               />
             </div>
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -129,7 +129,7 @@ export function MenuSection() {
               onClick={(e) => e.stopPropagation()}
             >
               <Image
-                src="/menu/menu1.jpeg"
+                src="/menu/menu1.jpg"
                 alt="Full Shisha Menu"
                 width={1300}
                 height={1800}
