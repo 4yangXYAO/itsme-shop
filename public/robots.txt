@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://itsmebali.com/sitemap.xml
+
+# Crawl-delay for polite crawlers
+Crawl-delay: 10
