@@ -9,11 +9,11 @@ export function LocationMarquee() {
 
   const marqueeItems = [
     { text: t("OPEN 24 HOURS", "BUKA 24 JAM"), highlight: true },
-    { text: "HOOKAH LOUNGE", highlight: false },
-    { text: "TATTOO STUDIO", highlight: false },
+    { text: "SHISHA", highlight: false },
+    { text: "TATTOO", highlight: false },
     { text: "ALL OF BALI", highlight: false },
     { text: "DALUNG, BADUNG", highlight: false },
-    { text: "CIA HOUSE", highlight: false },
+    { text: "ITSME STUDIO", highlight: false },
   ]
 
   useEffect(() => {

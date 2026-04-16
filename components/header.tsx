@@ -14,7 +14,7 @@ interface HeaderProps {
 }
 
 const navItems: { screen: Screen; labelEn: string; labelId: string; sectionId?: string }[] = [
-  { screen: "menu", labelEn: "Hookah", labelId: "Hookah", sectionId: "shisha" },
+  { screen: "menu", labelEn: "Shisha", labelId: "Shisha", sectionId: "shisha" },
   { screen: "tattoo", labelEn: "Tattoo", labelId: "Tattoo", sectionId: "tattoo" },
   { screen: "gallery", labelEn: "Gallery", labelId: "Galeri", sectionId: "galeri" },
   { screen: "locations", labelEn: "Location", labelId: "Lokasi", sectionId: "lokasi" },
@@ -27,8 +27,8 @@ export function Header({ activeScreen, onNavigate }: HeaderProps) {
 
   const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     t(
-      "Hi ItsMe Hookah & Tattoo! I would like to make a reservation.",
-      "Halo ItsMe Hookah & Tattoo! Saya ingin membuat reservasi."
+      "Hi ItsMe Shisha & Tattoo! I would like to make a reservation.",
+      "Halo ItsMe Shisha & Tattoo! Saya ingin membuat reservasi."
     )
   )}`
 
@@ -75,7 +75,7 @@ export function Header({ activeScreen, onNavigate }: HeaderProps) {
             className="flex-shrink-0"
           >
             <span className="font-serif text-2xl tracking-wider text-foreground whitespace-nowrap">
-              ITSME <span className="text-primary">HOOKAH</span> &amp;{" "}
+              ITSME <span className="text-primary">SHISHA</span> &amp;{" "}
               <span className="text-primary">TATTOO</span>
             </span>
           </button>

@@ -13,14 +13,14 @@ export function AboutSection() {
         </h2>
         <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
           {t(
-            "At ItsMe Hookah & Tattoo, we unite two timeless art forms under one roof. Our premium hookah selection is crafted from quality imported tobacco, while our skilled tattoo artists bring your visions to life with custom designs that tell your story.",
-            "Di ItsMe Hookah & Tattoo, kami menyatukan dua seni abadi dalam satu atap. Pilihan hookah premium kami menggunakan tembakau impor berkualitas, sementara artist tattoo kami yang berpengalaman mewujudkan visi kamu menjadi karya seni di tubuh."
+            "At ItsMe Shisha & Tattoo, we unite two timeless art forms under one roof. Our premium hookah selection is crafted from quality imported tobacco, while our skilled tattoo artists bring your visions to life with custom designs that tell your story.",
+            "Di ItsMe Shisha & Tattoo, kami menyatukan dua seni abadi dalam satu atap. Pilihan hookah premium kami menggunakan tembakau impor berkualitas, sementara artist tattoo kami yang berpengalaman mewujudkan visi kamu menjadi karya seni di tubuh."
           )}
         </p>
         <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
           {t(
-            "Located at Perumahan Graha Tibung Sari, Dalung, Badung (Cia House), we're open 24 hours. Drop by anytime or book a tattoo consultation via WhatsApp!",
-            "Berlokasi di Perumahan Graha Tibung Sari, Dalung, Badung (Cia House), kami buka 24 jam. Datang kapan saja atau booking konsultasi tattoo via WhatsApp!"
+            "Located at Perumahan Graha Tibung Sari No. 7, Dalung, Kuta Utara, Badung, Bali, ( Its Me Shisha Rental & Tattoo Studio ) Feel free to visit anytime or book a tattoo consultation via WhatsApp!",
+            "Berlokasi di Perumahan Graha Tibung Sari No. 7, Dalung, Kuta Utara, Badung, Bali, ( Its Me Shisha Rental & Tattoo Studio ) Silakan datang kapan saja atau booking konsultasi tattoo melalui WhatsApp!"
           )}
         </p>
         <div className="flex flex-wrap justify-center gap-8 md:gap-12 mt-16">

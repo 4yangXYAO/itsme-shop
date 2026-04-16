@@ -103,7 +103,7 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
   const WHATSAPP_NUMBER = "6282266475348"
 
 const RESEV_UTAMA = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  "Hi ItsMe Hookah & Tattoo! I would like to make a reservation."
+  "Hi ItsMe Shisha & Tattoo! I would like to make a reservation."
 )}`
 
   return (
@@ -125,8 +125,8 @@ const RESEV_UTAMA = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
           style={{ lineHeight: "1.2", letterSpacing: "0.02em" }}
         >
           {t(
-            "Welcome to ItsMe Hookah & Tattoo, where smoke meets art",
-            "Selamat Datang di ItsMe Hookah & Tattoo, tempat asap bertemu seni"
+            "Welcome to ItsMe Shisha & Tattoo, where smoke meets art",
+            "Selamat Datang di ItsMe Shisha & Tattoo, tempat asap bertemu seni"
           )}
         </h1>
         <p className="text-muted-foreground mt-6 text-sm sm:text-base md:text-lg max-w-xl">
@@ -140,7 +140,7 @@ const RESEV_UTAMA = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
           {/* Menu Shisha — putih redup solid */}
           <Button
             size="lg"
-            className="w-full sm:w-44 bg-gray-800 text-white hover:bg-gray-700  uppercase tracking-[0.1em] text-xs sm:text-sm px-6 py-5"
+            className="w-full sm:w-44 bg-gray-800 text-white hover:bg-gray-700  uppercase tracking-[0.1em] text-5px sm:text-sm px-6 py-5"
             onClick={() => onNavigate?.("menu")}
           >
             {t("Shisha Menu", "Menu Shisha")}
@@ -149,7 +149,7 @@ const RESEV_UTAMA = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
           {/* Harga Tattoo — gold gelap, premium */}
           <Button
             size="lg"
-            className="w-full sm:w-44 bg-[#b8860b] text-white hover:bg-[#a07808] uppercase tracking-[0.1em] text-xs sm:text-sm px-6 py-5"
+            className="w-full sm:w-44 bg-[#b8860b] text-white hover:bg-[#a07808] uppercase tracking-[0.1em] text-5px sm:text-sm px-6 py-5"
             onClick={() => onNavigate?.("tattoo")}
           >
             {t("Tattoo Pricelist", "Harga Tattoo")}
@@ -158,11 +158,10 @@ const RESEV_UTAMA = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
           {/* WhatsApp — hijau hutan gelap */}
           <Button
             size="lg"
-            className="w-full sm:w-44 bg-[#1b5e35] text-white hover:bg-[#164d2c] uppercase tracking-[0.1em] text-xs sm:text-sm px-6 py-5"
+            className="w-full sm:w-44 bg-[#1b5e35] text-white hover:bg-[#164d2c] uppercase tracking-[0.1em] text-5px sm:text-sm px-6 py-5"
             asChild
           >
             <a href={RESEV_UTAMA} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="w-4 h-4 mr-2" />
               {t("WhatsApp Us", "Chat WhatsApp")}
             </a>
           </Button>

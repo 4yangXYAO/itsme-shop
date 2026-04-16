@@ -21,10 +21,10 @@ const BASE_URL = 'https://itsmebali.com'
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: 'ItsMe Hookah & Tattoo Bali – Shisha Lounge & Tattoo Studio | Open 24 Hours',
-    template: '%s | ItsMe Hookah & Tattoo Bali',
+    default: 'ItsMe Shisha & Tattoo Bali – Shisha Lounge & Tattoo Studio | Open 24 Hours',
+    template: '%s | ItsMe Shisha & Tattoo Bali',
   },
-  description: 'ItsMe Hookah & Tattoo — premium shisha lounge and custom tattoo studio in Bali. Open 24 hours at Perumahan Graha Tibung Sari No. 7, Dalung, Badung. Shisha delivery all Bali. Tattoo from IDR 350K. WhatsApp +62 822 6647 5348.',
+  description: 'ItsMe Shisha & Tattoo — premium shisha lounge and custom tattoo studio in Bali. Open 24 hours at Perumahan Graha Tibung Sari No. 7, Dalung, Badung. Shisha delivery all Bali. Tattoo from IDR 350K. WhatsApp +62 822 6647 5348.',
   keywords: [
     'hookah bali', 'shisha bali', 'shisha dalung', 'shisha badung', 'hookah delivery bali',
     'tattoo bali', 'tattoo dalung', 'tattoo studio bali', 'tattoo murah bali',
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
     'bali tattoo studio', 'custom tattoo bali', 'shisha delivery dalung',
     'shisha buy 2 get 1', 'shisha graha tibung sari',
   ],
-  authors: [{ name: 'ItsMe Hookah & Tattoo', url: BASE_URL }],
-  creator: 'ItsMe Hookah & Tattoo',
-  publisher: 'ItsMe Hookah & Tattoo',
+  authors: [{ name: 'ItsMe Shisha & Tattoo', url: BASE_URL }],
+  creator: 'ItsMe Shisha & Tattoo',
+  publisher: 'ItsMe Shisha & Tattoo',
   category: 'entertainment',
   alternates: {
     canonical: BASE_URL,
@@ -47,8 +47,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: BASE_URL,
-    siteName: 'ItsMe Hookah & Tattoo Bali',
-    title: 'ItsMe Hookah & Tattoo Bali – Premium Shisha Lounge & Tattoo Studio | Open 24/7',
+    siteName: 'ItsMe Shisha & Tattoo Bali',
+    title: 'ItsMe Shisha & Tattoo Bali – Premium Shisha Lounge & Tattoo Studio | Open 24/7',
     description: 'Premium shisha lounge and custom tattoo studio in Bali. Open 24 hours. Delivery all Bali. Tattoo from IDR 350K. Located at Perumahan Graha Tibung Sari, Dalung, Badung.',
     images: [
       {
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ItsMe Hookah & Tattoo Bali | Open 24 Hours',
+    title: 'ItsMe Shisha & Tattoo Bali | Open 24 Hours',
     description: 'Premium shisha lounge and custom tattoo studio in Bali. Open 24/7. Delivery all Bali. Tattoo from IDR 350K.',
     images: ['/assets/hero-hookah-bg.png'],
     site: '@its_me_shisha',
@@ -88,6 +88,10 @@ export const metadata: Metadata = {
     'geo.placename': 'Dalung, Badung, Bali',
     'geo.position': '-8.6244;115.175',
     'ICBM': '-8.6244, 115.175',
+  title: 'ItsMe Shisha & Tattoo – Premium Shisha Lounge & Tattoo Studio in Dalung, Badung | Buka 24 Jam',
+  description: 'ItsMe Shisha & Tattoo — destinasi premium shisha dan tattoo terbaik di Bali. Buka 24 jam di Perumahan Graha Tibung Sari, Dalung, Badung (Cia House). Shisha Buy 2 Get 1 Free. Tattoo mulai IDR 350K.',
+  icons: {
+    icon: '/icon/favicon.ico',
   },
 }
 

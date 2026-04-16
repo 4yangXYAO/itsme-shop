@@ -12,8 +12,8 @@ export function LocationsSection() {
 
   const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     t(
-      "Hi ItsMe Hookah & Tattoo! I am on my way to your location.",
-      "Halo ItsMe Hookah & Tattoo! Saya sedang menuju lokasi kalian."
+      "Hi ItsMe Shisha & Tattoo! I am on my way to your location.",
+      "Halo ItsMe Shisha & Tattoo! Saya sedang menuju lokasi kalian."
     )
   )}`
 
@@ -49,7 +49,7 @@ export function LocationsSection() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="ItsMe Hookah & Tattoo Location"
+                title="ItsMe Shisha & Tattoo Location"
                 className="w-full h-full grayscale"
               />
               {/* 24 Hours Badge */}
@@ -63,7 +63,7 @@ export function LocationsSection() {
             {/* Content */}
             <div className="p-8 md:p-12">
               <h3 className="font-serif text-3xl md:text-4xl text-foreground mb-4">
-                ItsMe Hookah &amp; Tattoo
+                ItsMe Shisha &amp; Tattoo
               </h3>
 
               <div className="flex items-start gap-3 mb-6">
