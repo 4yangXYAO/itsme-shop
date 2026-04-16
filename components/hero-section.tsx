@@ -140,7 +140,7 @@ const RESEV_UTAMA = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
           {/* Menu Shisha — putih redup solid */}
           <Button
             size="lg"
-            className="w-full sm:w-44 bg-gray-800 text-white hover:bg-gray-700  uppercase tracking-[0.1em] text-xs sm:text-sm px-6 py-5"
+            className="w-full sm:w-44 bg-gray-800 text-white hover:bg-gray-700  uppercase tracking-[0.1em] text-5px sm:text-sm px-6 py-5"
             onClick={() => onNavigate?.("menu")}
           >
             {t("Shisha Menu", "Menu Shisha")}
@@ -149,7 +149,7 @@ const RESEV_UTAMA = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
           {/* Harga Tattoo — gold gelap, premium */}
           <Button
             size="lg"
-            className="w-full sm:w-44 bg-[#b8860b] text-white hover:bg-[#a07808] uppercase tracking-[0.1em] text-xs sm:text-sm px-6 py-5"
+            className="w-full sm:w-44 bg-[#b8860b] text-white hover:bg-[#a07808] uppercase tracking-[0.1em] text-5px sm:text-sm px-6 py-5"
             onClick={() => onNavigate?.("tattoo")}
           >
             {t("Tattoo Pricelist", "Harga Tattoo")}
@@ -158,11 +158,10 @@ const RESEV_UTAMA = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
           {/* WhatsApp — hijau hutan gelap */}
           <Button
             size="lg"
-            className="w-full sm:w-44 bg-[#1b5e35] text-white hover:bg-[#164d2c] uppercase tracking-[0.1em] text-xs sm:text-sm px-6 py-5"
+            className="w-full sm:w-44 bg-[#1b5e35] text-white hover:bg-[#164d2c] uppercase tracking-[0.1em] text-5px sm:text-sm px-6 py-5"
             asChild
           >
             <a href={RESEV_UTAMA} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="w-4 h-4 mr-2" />
               {t("WhatsApp Us", "Chat WhatsApp")}
             </a>
           </Button>
