@@ -88,8 +88,7 @@ export const metadata: Metadata = {
     'geo.placename': 'Dalung, Badung, Bali',
     'geo.position': '-8.6244;115.175',
     'ICBM': '-8.6244, 115.175',
-  title: 'ItsMe Shisha & Tattoo – Premium Shisha Lounge & Tattoo Studio in Dalung, Badung | Buka 24 Jam',
-  description: 'ItsMe Shisha & Tattoo — destinasi premium shisha dan tattoo terbaik di Bali. Buka 24 jam di Perumahan Graha Tibung Sari, Dalung, Badung (Cia House). Shisha Buy 2 Get 1 Free. Tattoo mulai IDR 350K.',
+  },
   icons: {
     icon: '/icon/favicon.ico',
   },
