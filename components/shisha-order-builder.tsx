@@ -30,7 +30,7 @@ export const PACKAGES = [
   },
 ]
 
-export const SIGNATURE_FLAVORS = ["Tropina Mint", "Berry Fusion"]
+export const SIGNATURE_FLAVORS = ["Tropina Mint", "Berry Fusion", "Might Night Pain","Tropikiss "]
 export const SINGLE_FLAVORS = ["Mint", "2Apple", "Kiwi", "Strawberry", "Nanas", "Blueberry", "Semangka", "Panras"]
 export const MIX_FLAVORS = ["Lady Killer", "Love66", "Labonita", "Havana", "Marakunja"]
 export const DARKSIDE_FLAVORS = ["Red Alert", "Dark Passion", "Fruitality", "Spacejam"]
